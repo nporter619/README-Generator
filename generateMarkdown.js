@@ -1,7 +1,7 @@
 // Function to generate the license badge
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)\n`;
   }
   return '';
 }
@@ -9,9 +9,7 @@ function renderLicenseBadge(license) {
 // Function to generate the license link
 function renderLicenseLink(license) {
   if (license !== 'None') {
-    return (
-      `\n* [License](#license)\n`
-    )
+    return '* [License](#license)\n';
   }
   return '';
 }
@@ -19,53 +17,33 @@ function renderLicenseLink(license) {
 // Function to generate the license section
 function renderLicenseSection(license) {
   if (license !== 'None') {
-    return(
-      `## License This project is licensed under the ${license} license.`
-    )
+    return `## License\n\nThis project is licensed under the ${license} license.\n`;
   }
   return '';
 }
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+${data.title ? `# Title: ${data.title}\n` : ''}
 
 ${renderLicenseBadge(data.license)}
 
-## Description 
+${data.description ? `## Description\n\n${data.description}\n` : ''}
 
-${data.description}
+${data.installation || data.usage || data.contributing || data.tests || data.license !== 'None' ? `## Table of Contents\n\n${data.installation ? '* [Installation](#installation)\n' : ''}${data.usage ? '* [Usage](#usage)\n' : ''}${renderLicenseLink(data.license)}${data.contributing ? '* [Contributing](#contributing)\n' : ''}${data.tests ? '* [Tests](#tests)\n' : ''}${data.username || data.email ? '* [Questions](#questions)\n' : ''}` : ''}
 
-## Table of Contents 
+${data.installation ? `## Installation\n\n${data.installation}\n` : ''}
 
-* [Installation](#installation)
-* [Usage](#usage)
-${renderLicenseLink(data.license)}
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-
-## Installation
-
-${data.installation}
-
-## Usage 
-
-${data.usage}
+${data.usage ? `## Usage\n\n${data.usage}\n` : ''}
 
 ${renderLicenseSection(data.license)}
 
-## Contributing
+${data.contributing ? `## Contributing\n\n${data.contributing}\n` : ''}
 
-${data.contributing}
+${data.tests ? `## Tests\n\n${data.tests}\n` : ''}
 
-## Tests
-
-${data.tests}
-
-## Questions
-
-If you have any questions about the repo, open an issue or contact [${data.username}](https://github.com/${data.username}) directly at ${data.email}.
+${data.username || data.email ? `## Questions\n\n${data.username ? `If you have any questions about the repo, open an issue or contact [${data.username}](https://github.com/${data.username}).\n` : ''}${data.email ? `You can also contact directly at ${data.email}.\n` : ''}` : ''}
 `;
 }
 
