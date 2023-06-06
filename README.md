@@ -1,5 +1,5 @@
 
-# Title: we good
+# Title: README Generator
 
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -7,7 +7,7 @@
 
 ## Description
 
-double checking everything going on
+This application will generate a README.md file based off the user input from the prompts in node js by running node index in the command line from the index.js file. I used Node JS and inquirer NPM package to make an interactive Command Line Interface (CLI). I faced the challenge of getting the prompts to display properly and not display when there was no user input and how to include them all.
 
 
 ## Table of Contents
@@ -15,38 +15,28 @@ double checking everything going on
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
 * [Questions](#questions)
 
 
 ## Installation
 
-this and that 2. and this
+Download the project from Github run it in vs code. Install the necessary dependencies (node.JS and npm inquirer @8.2.4).
 
 
 ## Usage
 
-do this first then 2 do that
+Once you've downloaded the necessary dependencies navigate to the index.js in the command line and start the app by typing in node index.
 
+## Link to walkthrough Video:
+ https://drive.google.com/file/d/1_axsBWOd5-jElUfN7fqR2ngVWB3ZawZJ/view?usp=drive_link
 
 ## License
 
 This project is licensed under the MIT license.
 
 
-## Contributing
-
-no contributing allowed
-
-
-## Tests
-
-do not test me
-
-
 ## Questions
 
-If you have any questions about the repo, open an issue or contact [dsiaojd.io](https://github.com/dsiaojd.io).
-You can also contact directly at asldkajsd.com.
+If you have any questions about the repo, open an issue or contact [nporter619](https://github.com/nporter619).
+You can also contact directly at nporterwork@gmail.com.
 
